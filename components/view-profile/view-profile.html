@@ -1,0 +1,25 @@
+<div class="profile-view-image-container">
+  <img class="profile-view-image" src="assets/imgs/avatar-placeholder.png"/>
+</div>
+<div *ngIf="userProfile">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [readonly] [value]="userProfile.email" [disabled]></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input [readonly] [value]="userProfile.firstName" [disabled]></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [readonly] [value]="userProfile.lastName" [disabled]></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Date Of Birth</ion-label>
+        <ion-input [readonly] [disabled] [value]="userProfile.dateOfBirth"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>

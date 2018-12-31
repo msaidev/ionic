@@ -1,0 +1,6 @@
+<ion-header>
+  <ion-navbar> <ion-title>Profile</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content padding> <app-edit-profile (saveProfileResult)="onSaveProfileDone($event)"
+                                        [existingProfile]="existingProfile"></app-edit-profile> </ion-content>

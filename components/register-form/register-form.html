@@ -1,0 +1,26 @@
+<ion-card>
+  <form #regForm="ngForm" (submit)="onRegisterClick()">
+    <ion-item>
+      <ion-label floating>Email Address</ion-label>
+      <ion-input
+        [(ngModel)]="account.email"
+        name="email"
+        type="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input
+        [(ngModel)]="account.password"
+        name="password"
+        type="password"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <button [disabled]="!regForm.valid" block ion-button type="submit">
+        Register
+      </button>
+    </ion-item>
+  </form>
+</ion-card>
